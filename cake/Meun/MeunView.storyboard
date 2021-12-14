@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Meun View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MeunView" id="Y6W-OH-hqX" customClass="MeunViewController" customModule="cake" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BpL-6S-EUu">
+                                <rect key="frame" x="182" y="791" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.99607843137254903" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cKF-Q5-HtD"/>
+                                    <constraint firstAttribute="width" constant="50" id="cNi-mz-0xe"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="doc.text" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="scheduleButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Rr0-Pv-4KR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAz-1d-vNf">
+                                <rect key="frame" x="285" y="791" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.99607843137254903" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="FqH-Ag-QbZ"/>
+                                    <constraint firstAttribute="height" constant="50" id="G0A-CS-BmA"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chart.bar.xaxis" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="chartButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="iCQ-Ds-QdN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siQ-m2-f2D">
+                                <rect key="frame" x="79" y="791" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.99607843137254903" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="C2Y-jq-g1L"/>
+                                    <constraint firstAttribute="width" constant="50" id="c3K-Ow-tYo"/>
+                                </constraints>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="person.fill" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="memberButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3cg-BQ-YvP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="tAz-1d-vNf" secondAttribute="bottom" constant="21" id="18B-8R-bRM"/>
+                            <constraint firstItem="tAz-1d-vNf" firstAttribute="leading" secondItem="BpL-6S-EUu" secondAttribute="trailing" constant="53" id="BS9-Wv-RoB"/>
+                            <constraint firstItem="BpL-6S-EUu" firstAttribute="leading" secondItem="siQ-m2-f2D" secondAttribute="trailing" constant="53" id="O1O-L0-7CK"/>
+                            <constraint firstItem="BpL-6S-EUu" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="ZJr-us-zmN"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="BpL-6S-EUu" secondAttribute="bottom" constant="21" id="nd7-TM-KoT"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="siQ-m2-f2D" secondAttribute="bottom" constant="21" id="tYV-QV-dsF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ftu-kV-Pic"/>
+                    <connections>
+                        <outlet property="chartButton" destination="tAz-1d-vNf" id="tBP-NV-CJV"/>
+                        <outlet property="memberButton" destination="siQ-m2-f2D" id="gDl-XW-J5v"/>
+                        <outlet property="scheduleButton" destination="BpL-6S-EUu" id="wdf-hq-IWW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989.85507246376824" y="60.9375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9Oh-BO-bRx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lYR-Zi-3Ud" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YAe-Cs-B3a">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="lwD-WA-dL8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jbg-cN-KnS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="79.710144927536234" y="60.9375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chart.bar.xaxis" catalog="system" width="128" height="98"/>
+        <image name="doc.text" catalog="system" width="115" height="128"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--幹部-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ScheduleView" id="Y6W-OH-hqX" customClass="ScheduleViewControllor" customModule="cake" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="幹部" image="person.circle" catalog="system" id="SWT-8m-0Me"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1814" y="265"/>
+        </scene>
+        <!--發佈-->
+        <scene sceneID="awu-fp-FpJ">
+            <objects>
+                <viewController id="ASE-BK-7V8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ane-iG-1mA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="UGc-DG-ngH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="發佈" image="paperplane.fill" catalog="system" id="o1V-sO-Ogh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="etO-yq-tJp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="921"/>
+        </scene>
+        <!--班表-->
+        <scene sceneID="EDj-Zk-asE">
+            <objects>
+                <viewController id="wq2-aB-gEV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VHf-Se-KCw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qrR-ub-gzg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="班表" image="doc.text.fill" catalog="system" id="6y0-Mv-9eu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="204-fI-eQ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="-636"/>
+        </scene>
+        <!--人力-->
+        <scene sceneID="m7l-if-Yt1">
+            <objects>
+                <viewController id="f5C-Zb-8JM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l8u-lx-X19">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dpH-cD-nSc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="人力" image="person.2.fill" catalog="system" id="p00-RB-uVF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sf0-Gb-EpE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1813" y="-425"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="7Or-s0-MrC">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="UCJ-sI-mJX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="alJ-WL-VWq">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="viewControllers" id="eX6-ki-986"/>
+                        <segue destination="wq2-aB-gEV" kind="relationship" relationship="viewControllers" id="dIU-em-xrs"/>
+                        <segue destination="f5C-Zb-8JM" kind="relationship" relationship="viewControllers" id="czP-rL-bHD"/>
+                        <segue destination="ASE-BK-7V8" kind="relationship" relationship="viewControllers" id="guK-HG-7EB"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WDG-hQ-QZi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="79.710144927536234" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="doc.text.fill" catalog="system" width="115" height="128"/>
+        <image name="paperplane.fill" catalog="system" width="128" height="118"/>
+        <image name="person.2.fill" catalog="system" width="128" height="80"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
