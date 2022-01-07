@@ -1,16 +1,34 @@
 PODS:
+  - Alamofire (5.4.4)
+  - FSCalendar (2.8.2)
+  - SDWebImage (5.12.1):
+    - SDWebImage/Core (= 5.12.1)
+  - SDWebImage/Core (5.12.1)
+  - SwiftKeychainWrapper (4.0.1)
   - SwiftLint (0.45.0)
 
 DEPENDENCIES:
+  - Alamofire
+  - FSCalendar
+  - SDWebImage
+  - SwiftKeychainWrapper (~> 4.0)
   - SwiftLint
 
 SPEC REPOS:
   trunk:
+    - Alamofire
+    - FSCalendar
+    - SDWebImage
+    - SwiftKeychainWrapper
     - SwiftLint
 
 SPEC CHECKSUMS:
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
+  SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
+  SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
   SwiftLint: e5c7f1fba68eccfc51509d5b2ce1699f5502e0c7
 
-PODFILE CHECKSUM: 6703154a357c9a3eb78f9521030ff0fa46a26e6a
+PODFILE CHECKSUM: d736cf643d203a140a3141f457c8a0038fac6004
 
 COCOAPODS: 1.11.2

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ScheduleListOfWorkTableViewCell" customModule="cake" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上班時間：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tbn-fJ-tbE">
+                        <rect key="frame" x="20" y="37" width="66.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="休息時間：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6w-cy-riP">
+                        <rect key="frame" x="20" y="61" width="66.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17:30 ~17:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HnW-2h-Arr">
+                        <rect key="frame" x="96.5" y="61" width="78" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:00 ~ 24:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNN-7z-V2l">
+                        <rect key="frame" x="96.5" y="37" width="83.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="班別名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZO-ev-vWG">
+                        <rect key="frame" x="20" y="11" width="61.5" height="18"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.41960784309999999" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="時數：8小時" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpw-gk-Ztj">
+                        <rect key="frame" x="225" y="12" width="75" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.53725490196078429" green="0.72549019607843135" blue="0.81960784313725488" alpha="0.5" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="Tbn-fJ-tbE" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="0dh-2d-GMc"/>
+                    <constraint firstItem="HnW-2h-Arr" firstAttribute="leading" secondItem="c6w-cy-riP" secondAttribute="trailing" constant="10" id="545-ef-lyD"/>
+                    <constraint firstItem="Tbn-fJ-tbE" firstAttribute="leading" secondItem="pZO-ev-vWG" secondAttribute="leading" id="71O-zO-aMN"/>
+                    <constraint firstItem="c6w-cy-riP" firstAttribute="leading" secondItem="pZO-ev-vWG" secondAttribute="leading" id="AQK-cK-Uo1"/>
+                    <constraint firstItem="XNN-7z-V2l" firstAttribute="centerY" secondItem="Tbn-fJ-tbE" secondAttribute="centerY" id="CYi-0i-phx"/>
+                    <constraint firstAttribute="trailing" secondItem="dpw-gk-Ztj" secondAttribute="trailing" constant="20" id="DHL-Yx-ZYD"/>
+                    <constraint firstItem="XNN-7z-V2l" firstAttribute="leading" secondItem="Tbn-fJ-tbE" secondAttribute="trailing" constant="10" id="EQP-tz-vMr"/>
+                    <constraint firstItem="dpw-gk-Ztj" firstAttribute="centerY" secondItem="pZO-ev-vWG" secondAttribute="centerY" id="Fqr-dH-xWx"/>
+                    <constraint firstItem="HnW-2h-Arr" firstAttribute="centerY" secondItem="c6w-cy-riP" secondAttribute="centerY" id="NYA-UZ-ouj"/>
+                    <constraint firstItem="Tbn-fJ-tbE" firstAttribute="top" secondItem="pZO-ev-vWG" secondAttribute="bottom" constant="8" id="gtA-FO-57P"/>
+                    <constraint firstItem="c6w-cy-riP" firstAttribute="top" secondItem="Tbn-fJ-tbE" secondAttribute="bottom" constant="8" id="lXs-3q-esj"/>
+                    <constraint firstItem="pZO-ev-vWG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="skg-ql-gJb"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                        <integer key="value" value="10"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="132" y="96"/>
+        </tableViewCell>
+    </objects>
+</document>

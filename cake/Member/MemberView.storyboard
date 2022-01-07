@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--群組成員-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MemberView" id="Y6W-OH-hqX" customClass="MemberViewController" customModule="cake" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUD-AF-eYP">
+                                <rect key="frame" x="20" y="88" width="108" height="31"/>
+                                <color key="backgroundColor" red="0.82745098039215681" green="0.90980392156862744" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.20000000000000001" green="0.41960784309999999" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="filemenu.and.cursorarrow.rtl" catalog="system" title="選擇標籤"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="labelFilterButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qyz-Se-URI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnZ-OW-QEt">
+                                <rect key="frame" x="145" y="88" width="102" height="31"/>
+                                <color key="backgroundColor" red="0.82745098039215681" green="0.90980392156862744" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.20000000000000001" green="0.41960784309999999" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="gearshape.fill" catalog="system" title="設定標籤"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="setLabelButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ehS-oL-IYR"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sEU-9T-quS">
+                                <rect key="frame" x="20" y="127" width="374" height="727"/>
+                                <color key="backgroundColor" red="0.82745098039999998" green="0.90980392160000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.20000000000000001" green="0.41960784309999999" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gmt-m3-LvB">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="50" height="30"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="oBf-iJ-zZV">
+                                        <rect key="frame" x="0.0" y="30" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZDe-MQ-1Lz">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Header" id="rdM-TY-1Ec" customClass="HeaderView" customModule="cake" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="標籤名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLV-it-KHR">
+                                            <rect key="frame" x="8" y="4.5" width="69.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.20000000000000001" green="0.41960784313725491" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.82745098039999998" green="0.90980392160000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="fLV-it-KHR" firstAttribute="leading" secondItem="rdM-TY-1Ec" secondAttribute="leadingMargin" id="JIo-C4-j6K"/>
+                                        <constraint firstItem="fLV-it-KHR" firstAttribute="centerY" secondItem="rdM-TY-1Ec" secondAttribute="centerY" id="ZdB-oQ-S7g"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="labelName" destination="fLV-it-KHR" id="KoI-O8-uaZ"/>
+                                    </connections>
+                                </collectionReusableView>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="sEU-9T-quS" secondAttribute="bottom" constant="8" id="40X-N8-ANo"/>
+                            <constraint firstItem="sEU-9T-quS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="4UR-Wf-fx0"/>
+                            <constraint firstItem="BUD-AF-eYP" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="4ZA-B8-4AO"/>
+                            <constraint firstItem="hnZ-OW-QEt" firstAttribute="leading" secondItem="BUD-AF-eYP" secondAttribute="trailing" constant="17" id="I5L-4k-YnH"/>
+                            <constraint firstItem="hnZ-OW-QEt" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="topMargin" id="bvJ-h4-gho"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sEU-9T-quS" secondAttribute="trailing" constant="20" id="d72-VM-ewD"/>
+                            <constraint firstItem="BUD-AF-eYP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="se7-i9-I1V"/>
+                            <constraint firstItem="sEU-9T-quS" firstAttribute="top" secondItem="BUD-AF-eYP" secondAttribute="bottom" constant="8" id="yRT-29-ik9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="群組成員" id="Sz9-H6-xmi">
+                        <rightBarButtonItems>
+                            <barButtonItem image="person.fill.badge.plus" catalog="system" id="tlk-cm-AEd">
+                                <color key="tintColor" red="0.20000000000000001" green="0.41960784309999999" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="addMemberButton:" destination="Y6W-OH-hqX" id="i5p-Zv-t6d"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="person.badge.minus" catalog="system" id="4Li-Im-3yV">
+                                <color key="tintColor" red="0.20000000000000001" green="0.41960784309999999" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="removeMemberButton:" destination="Y6W-OH-hqX" id="Jdh-nh-Fht"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addMemberButton" destination="tlk-cm-AEd" id="uS7-Mc-5q0"/>
+                        <outlet property="labelFilterButton" destination="BUD-AF-eYP" id="QQY-Ei-99P"/>
+                        <outlet property="memberListCollectionView" destination="sEU-9T-quS" id="eJ1-MA-TwY"/>
+                        <outlet property="setLabelButton" destination="hnZ-OW-QEt" id="i2t-5g-nx8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="979.71014492753636" y="60.9375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="86F-6o-g9Y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9dc-Wd-vZg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eQg-C4-0La">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="gH5-r7-Jik"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oHN-UW-STR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69.565217391304358" y="60.9375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="filemenu.and.cursorarrow.rtl" catalog="system" width="128" height="88"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
+        <image name="person.badge.minus" catalog="system" width="128" height="124"/>
+        <image name="person.fill.badge.plus" catalog="system" width="128" height="124"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

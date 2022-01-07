@@ -8,96 +8,260 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--幹部-->
-        <scene sceneID="s0d-6b-0kx">
-            <objects>
-                <viewController storyboardIdentifier="ScheduleView" id="Y6W-OH-hqX" customClass="ScheduleViewControllor" customModule="cake" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="幹部" image="person.circle" catalog="system" id="SWT-8m-0Me"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1814" y="265"/>
-        </scene>
-        <!--發佈-->
-        <scene sceneID="awu-fp-FpJ">
-            <objects>
-                <viewController id="ASE-BK-7V8" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ane-iG-1mA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="UGc-DG-ngH"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="發佈" image="paperplane.fill" catalog="system" id="o1V-sO-Ogh"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="etO-yq-tJp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="990" y="921"/>
-        </scene>
-        <!--班表-->
+        <!--班別設定-->
         <scene sceneID="EDj-Zk-asE">
             <objects>
-                <viewController id="wq2-aB-gEV" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScheduleView" id="wq2-aB-gEV" customClass="ScheduleViewControllor" customModule="cake" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VHf-Se-KCw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="5" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2Ku-IV-c5m">
+                                <rect key="frame" x="0.0" y="88" width="414" height="648"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLw-vY-QRU">
+                                <rect key="frame" x="182" y="746" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.82745098039215681" green="0.90980392156862744" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="X65-QL-fcu"/>
+                                    <constraint firstAttribute="height" constant="50" id="puz-sN-bIi"/>
+                                </constraints>
+                                <color key="tintColor" red="0.20000000000000001" green="0.41960784309999999" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system">
+                                    <color key="baseForegroundColor" red="0.20000000000000001" green="0.41960784309999999" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addScheduleButton:" destination="wq2-aB-gEV" eventType="touchUpInside" id="1k6-MS-lua"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="qrR-ub-gzg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="FLw-vY-QRU" secondAttribute="bottom" constant="100" id="2t4-3q-D4Z"/>
+                            <constraint firstItem="FLw-vY-QRU" firstAttribute="top" secondItem="2Ku-IV-c5m" secondAttribute="bottom" constant="10" id="3dw-oi-Slb"/>
+                            <constraint firstItem="qrR-ub-gzg" firstAttribute="trailing" secondItem="2Ku-IV-c5m" secondAttribute="trailing" id="AXc-QX-DHz"/>
+                            <constraint firstItem="FLw-vY-QRU" firstAttribute="centerX" secondItem="qrR-ub-gzg" secondAttribute="centerX" id="Gii-Yl-TzG"/>
+                            <constraint firstItem="2Ku-IV-c5m" firstAttribute="leading" secondItem="qrR-ub-gzg" secondAttribute="leading" id="VnG-Sm-fcD"/>
+                            <constraint firstItem="2Ku-IV-c5m" firstAttribute="top" secondItem="qrR-ub-gzg" secondAttribute="top" id="oiD-P9-MsK"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="班表" image="doc.text.fill" catalog="system" id="6y0-Mv-9eu"/>
+                    <navigationItem key="navigationItem" title="班別設定" id="iPY-yE-Vog"/>
+                    <connections>
+                        <outlet property="addScheduleButton" destination="FLw-vY-QRU" id="6Yv-Gd-sPi"/>
+                        <outlet property="scheduleTableView" destination="2Ku-IV-c5m" id="5OV-Jl-8Es"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="204-fI-eQ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990" y="-636"/>
+            <point key="canvasLocation" x="996" y="1029"/>
         </scene>
-        <!--人力-->
+        <!--公休日設定-->
         <scene sceneID="m7l-if-Yt1">
             <objects>
-                <viewController id="f5C-Zb-8JM" sceneMemberID="viewController">
+                <viewController id="f5C-Zb-8JM" customClass="NumberOfPeopleViewController" customModule="cake" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l8u-lx-X19">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0L-G4-3Za" customClass="FSCalendar">
+                                <rect key="frame" x="10" y="88" width="394" height="685"/>
+                                <color key="backgroundColor" red="0.82745098039999998" green="0.90980392160000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.20000000000000001" green="0.41960784309999999" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JgQ-1o-wfX">
+                                <rect key="frame" x="304" y="781" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.82745098039999998" green="0.90980392160000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="P0b-AV-yNT"/>
+                                    <constraint firstAttribute="height" constant="30" id="S4N-ec-8uF"/>
+                                </constraints>
+                                <color key="tintColor" red="0.20000000000000001" green="0.41960784309999999" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="上傳設定"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="setPublicHolidayButton:" destination="f5C-Zb-8JM" eventType="touchUpInside" id="iYX-iK-cIG"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dpH-cD-nSc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="J0L-G4-3Za" firstAttribute="leading" secondItem="dpH-cD-nSc" secondAttribute="leading" constant="10" id="85S-u2-hIs"/>
+                            <constraint firstItem="J0L-G4-3Za" firstAttribute="top" secondItem="dpH-cD-nSc" secondAttribute="top" id="G6N-vH-ZBl"/>
+                            <constraint firstItem="JgQ-1o-wfX" firstAttribute="top" secondItem="J0L-G4-3Za" secondAttribute="bottom" constant="8" id="bdP-Os-3M6"/>
+                            <constraint firstItem="dpH-cD-nSc" firstAttribute="trailing" secondItem="J0L-G4-3Za" secondAttribute="trailing" constant="10" id="e2e-4h-OCL"/>
+                            <constraint firstItem="dpH-cD-nSc" firstAttribute="trailing" secondItem="JgQ-1o-wfX" secondAttribute="trailing" constant="10" id="llO-OC-JN0"/>
+                            <constraint firstItem="dpH-cD-nSc" firstAttribute="bottom" secondItem="J0L-G4-3Za" secondAttribute="bottom" constant="40" id="pu2-Qs-ueO"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="人力" image="person.2.fill" catalog="system" id="p00-RB-uVF"/>
+                    <navigationItem key="navigationItem" title="公休日設定" id="O4t-ZZ-8qM"/>
+                    <connections>
+                        <outlet property="numberOfPeopleCalendar" destination="J0L-G4-3Za" id="LYL-FH-C4w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sf0-Gb-EpE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1813" y="-425"/>
+            <point key="canvasLocation" x="997" y="1685"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="7Or-s0-MrC">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="UCJ-sI-mJX" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarViewController" automaticallyAdjustsScrollViewInsets="NO" id="UCJ-sI-mJX" customClass="TabBarViewController" customModule="cake" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="alJ-WL-VWq">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="viewControllers" id="eX6-ki-986"/>
-                        <segue destination="wq2-aB-gEV" kind="relationship" relationship="viewControllers" id="dIU-em-xrs"/>
-                        <segue destination="f5C-Zb-8JM" kind="relationship" relationship="viewControllers" id="czP-rL-bHD"/>
-                        <segue destination="ASE-BK-7V8" kind="relationship" relationship="viewControllers" id="guK-HG-7EB"/>
+                        <segue destination="RKx-f0-uZ6" kind="relationship" relationship="viewControllers" id="6oZ-nf-ibq"/>
+                        <segue destination="N5C-L1-afQ" kind="relationship" relationship="viewControllers" id="dIU-em-xrs"/>
+                        <segue destination="855-ce-9i1" kind="relationship" relationship="viewControllers" id="czP-rL-bHD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WDG-hQ-QZi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="79.710144927536234" y="79.6875"/>
+            <point key="canvasLocation" x="-999" y="1258"/>
+        </scene>
+        <!--班表生成＆預覽-->
+        <scene sceneID="4ud-0y-AXZ">
+            <objects>
+                <viewController id="xaZ-XX-I2H" customClass="PreviewViewController" customModule="cake" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LJU-RE-zfi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QkL-Ei-bsw" customClass="FSCalendar">
+                                <rect key="frame" x="10" y="88" width="394" height="685"/>
+                                <color key="backgroundColor" red="0.82745098039999998" green="0.90980392160000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZ2-gH-z59">
+                                <rect key="frame" x="304" y="781" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.82745098039999998" green="0.90980392160000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7BU-k9-KDr"/>
+                                    <constraint firstAttribute="width" constant="100" id="bMJ-a6-6OF"/>
+                                </constraints>
+                                <color key="tintColor" red="0.20000000000000001" green="0.41960784309999999" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="生成班表"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="generateScheduleButton:" destination="xaZ-XX-I2H" eventType="touchUpInside" id="Uek-yz-Br4"/>
+                                    <action selector="setPublicHolidayButton:" destination="f5C-Zb-8JM" eventType="touchUpInside" id="Bcd-Zj-qeV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="siP-Hh-uY4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QkL-Ei-bsw" firstAttribute="leading" secondItem="siP-Hh-uY4" secondAttribute="leading" constant="10" id="0wr-jr-ocD"/>
+                            <constraint firstItem="QkL-Ei-bsw" firstAttribute="top" secondItem="siP-Hh-uY4" secondAttribute="top" id="Bpn-1c-ZmK"/>
+                            <constraint firstItem="siP-Hh-uY4" firstAttribute="trailing" secondItem="lZ2-gH-z59" secondAttribute="trailing" constant="10" id="EWW-jz-YwH"/>
+                            <constraint firstItem="siP-Hh-uY4" firstAttribute="trailing" secondItem="QkL-Ei-bsw" secondAttribute="trailing" constant="10" id="T0q-bq-Qp1"/>
+                            <constraint firstItem="siP-Hh-uY4" firstAttribute="bottom" secondItem="QkL-Ei-bsw" secondAttribute="bottom" constant="40" id="Vpv-PM-3TN"/>
+                            <constraint firstItem="lZ2-gH-z59" firstAttribute="top" secondItem="QkL-Ei-bsw" secondAttribute="bottom" constant="8" id="lHo-py-3oa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="班表生成＆預覽" id="XDT-da-rYW"/>
+                    <connections>
+                        <outlet property="previewCalendar" destination="QkL-Ei-bsw" id="clX-0A-kpK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="den-B2-ESg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="290"/>
+        </scene>
+        <!--班別設定-->
+        <scene sceneID="fIk-N2-Gh1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="N5C-L1-afQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="班別設定" image="square.grid.3x1.below.line.grid.1x2.fill" catalog="system" id="6y0-Mv-9eu"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UYV-B9-eNE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wq2-aB-gEV" kind="relationship" relationship="rootViewController" id="7t2-BM-Wt6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BiI-Ci-Wc5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="1029"/>
+        </scene>
+        <!--公休日設定-->
+        <scene sceneID="wZl-Ds-3MU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="855-ce-9i1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="公休日設定" image="moon.circle" catalog="system" id="p00-RB-uVF"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dpv-70-1fm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="f5C-Zb-8JM" kind="relationship" relationship="rootViewController" id="ZIr-eG-kTT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dgu-vu-CI2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="175" y="1685"/>
+        </scene>
+        <!--班表預覽-->
+        <scene sceneID="r6F-Ec-u9K">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RKx-f0-uZ6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="班表預覽" image="eyes.inverse" catalog="system" id="ROm-W9-Eej"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tgA-rn-05U">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xaZ-XX-I2H" kind="relationship" relationship="rootViewController" id="WXj-9P-CnB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M4E-9c-hnb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="289"/>
         </scene>
     </scenes>
     <resources>
-        <image name="doc.text.fill" catalog="system" width="115" height="128"/>
-        <image name="paperplane.fill" catalog="system" width="128" height="118"/>
-        <image name="person.2.fill" catalog="system" width="128" height="80"/>
-        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="eyes.inverse" catalog="system" width="128" height="96"/>
+        <image name="moon.circle" catalog="system" width="128" height="121"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="square.grid.3x1.below.line.grid.1x2.fill" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

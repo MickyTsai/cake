@@ -7,4 +7,8 @@ target 'cake' do
 
   # Pods for cake
   pod "SwiftLint"
+  pod "FSCalendar"
+  pod "Alamofire"
+  pod "SDWebImage"
+  pod 'SwiftKeychainWrapper', '~> 4.0' 
 end

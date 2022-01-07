@@ -4,62 +4,79 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="cake" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" id="BYZ-38-t0r" customClass="ViewController" customModule="cake" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cdx-hb-S7i">
                                 <rect key="frame" x="53" y="512" width="308" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.94509803921568625" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.53725490200000003" green="0.72549019609999998" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPs-pf-zOj">
                                 <rect key="frame" x="53" y="566" width="308" height="31"/>
-                                <color key="backgroundColor" red="0.41176470588235292" green="0.74117647058823533" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.53725490196078429" green="0.72549019607843135" blue="0.81960784313725488" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="0.94509803920000002" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="登入"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="singInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wnt-Ds-dMJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZx-fw-QyM">
                                 <rect key="frame" x="53" y="617" width="308" height="31"/>
-                                <color key="backgroundColor" red="0.0" green="0.38039215686274508" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.41960784313725491" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="註冊"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="registerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mn2-K6-SVA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="排班小蛋糕" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AeT-z7-57z">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="排班小蛋糕" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AeT-z7-57z">
                                 <rect key="frame" x="146" y="409" width="122" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.41960784313725491" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="帳號" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bCR-8O-faf">
                                 <rect key="frame" x="53" y="458" width="308" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.94509803921568625" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.53725490200000003" green="0.72549019609999998" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.20000000000000001" green="0.41960784309999999" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar-icon" translatesAutoresizingMaskIntoConstraints="NO" id="2Uw-wo-h8f">
+                                <rect key="frame" x="87" y="141" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2Uw-wo-h8f" secondAttribute="height" multiplier="1:1" id="Khe-IR-e8x"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.82745098039215681" green="0.90980392156862744" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jPs-pf-zOj" secondAttribute="trailing" constant="53" id="0AX-O6-NKv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TZx-fw-QyM" secondAttribute="trailing" constant="53" id="1BL-6V-9dk"/>
+                            <constraint firstItem="AeT-z7-57z" firstAttribute="top" secondItem="2Uw-wo-h8f" secondAttribute="bottom" constant="28" id="7cv-pW-QFH"/>
                             <constraint firstItem="bCR-8O-faf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="8YL-M4-zj3"/>
                             <constraint firstItem="bCR-8O-faf" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Asb-YT-4Lh"/>
                             <constraint firstItem="jPs-pf-zOj" firstAttribute="top" secondItem="cdx-hb-S7i" secondAttribute="bottom" constant="20" id="BBs-sN-btz"/>
@@ -69,6 +86,8 @@
                             <constraint firstItem="AeT-z7-57z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PA4-Q8-Ikw"/>
                             <constraint firstItem="cdx-hb-S7i" firstAttribute="top" secondItem="bCR-8O-faf" secondAttribute="bottom" constant="20" id="R41-pR-rxm"/>
                             <constraint firstItem="jPs-pf-zOj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="RT4-PQ-v0k"/>
+                            <constraint firstItem="2Uw-wo-h8f" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="X3Y-vr-GFs"/>
+                            <constraint firstItem="2Uw-wo-h8f" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="15:56" id="cpP-HI-yNm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cdx-hb-S7i" secondAttribute="trailing" constant="53" id="l0T-jS-wxA"/>
                             <constraint firstItem="cdx-hb-S7i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="pDU-r5-CdQ"/>
                             <constraint firstItem="TZx-fw-QyM" firstAttribute="top" secondItem="jPs-pf-zOj" secondAttribute="bottom" constant="20" id="wk6-KC-meC"/>
@@ -104,8 +123,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="calendar-icon" width="1024" height="1024"/>
     </resources>
 </document>

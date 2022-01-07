@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Schedule Shifts View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ScheduleShiftsView" id="Y6W-OH-hqX" customClass="ScheduleShiftsViewController" customModule="cake" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FqB-zU-tlX">
+                                <rect key="frame" x="182" y="792" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.82745098039999998" green="0.90980392160000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="FQ7-iS-948"/>
+                                    <constraint firstAttribute="width" constant="50" id="nX0-GX-Nxm"/>
+                                </constraints>
+                                <color key="tintColor" red="0.20000000000000001" green="0.41960784309999999" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clearButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8GC-UJ-fkf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsm-5A-dw7">
+                                <rect key="frame" x="82" y="792" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.82745098039999998" green="0.90980392160000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7x5-Az-JjQ"/>
+                                    <constraint firstAttribute="width" constant="50" id="GCj-BN-4pJ"/>
+                                </constraints>
+                                <color key="tintColor" red="0.20000000000000001" green="0.41960784309999999" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="person.crop.circle.badge.moon" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="upLoadSchedule:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="lLF-sD-6JD"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ede-YQ-ndl" customClass="FSCalendar">
+                                <rect key="frame" x="10" y="104" width="394" height="678"/>
+                                <color key="backgroundColor" red="0.82745098039215681" green="0.90980392156862744" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.20000000000000001" green="0.41960784309999999" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="firstWeekday">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleWeekendColor">
+                                        <color key="value" systemColor="systemPinkColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="headerDateFormat" value="yyyy年MM月"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OxG-lQ-8G7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="預排班表" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6B-zY-O53">
+                                        <rect key="frame" x="172" y="13" width="70" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="M6B-zY-O53" firstAttribute="centerX" secondItem="OxG-lQ-8G7" secondAttribute="centerX" id="CQr-IJ-g5N"/>
+                                    <constraint firstItem="M6B-zY-O53" firstAttribute="top" secondItem="OxG-lQ-8G7" secondAttribute="top" constant="13" id="XK7-Ik-hWB"/>
+                                    <constraint firstAttribute="height" constant="50" id="aqG-2k-nA0"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="清除" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWJ-If-JAN">
+                                <rect key="frame" x="193.5" y="842" width="27" height="16"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.41960784309999999" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="統計報表" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Leo-Mp-hCX">
+                                <rect key="frame" x="280" y="842" width="54" height="16"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.41960784309999999" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="劃休上傳" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGT-uZ-k92">
+                                <rect key="frame" x="80" y="842" width="54" height="16"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.41960784309999999" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7U-C3-k1z">
+                                <rect key="frame" x="282" y="792" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.82745098039999998" green="0.90980392160000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="NXm-Y0-usY"/>
+                                    <constraint firstAttribute="height" constant="50" id="bsm-12-wFK"/>
+                                </constraints>
+                                <color key="tintColor" red="0.20000000000000001" green="0.41960784309999999" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chart.bar.xaxis" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="chartButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ekG-0m-bud"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OxG-lQ-8G7" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="44" id="5w7-Mk-dEm"/>
+                            <constraint firstItem="LWJ-If-JAN" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="9BV-4B-xJ6"/>
+                            <constraint firstItem="FqB-zU-tlX" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="GSA-MP-YFl"/>
+                            <constraint firstItem="dGT-uZ-k92" firstAttribute="centerY" secondItem="LWJ-If-JAN" secondAttribute="centerY" id="JOD-SL-MQ1"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ede-YQ-ndl" secondAttribute="trailing" constant="10" id="NWP-od-ryU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OxG-lQ-8G7" secondAttribute="trailing" id="QhW-PJ-HC3"/>
+                            <constraint firstItem="FqB-zU-tlX" firstAttribute="leading" secondItem="hsm-5A-dw7" secondAttribute="trailing" constant="50" id="R5R-uk-NQI"/>
+                            <constraint firstItem="OxG-lQ-8G7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Tpk-am-H13"/>
+                            <constraint firstItem="Leo-Mp-hCX" firstAttribute="centerX" secondItem="l7U-C3-k1z" secondAttribute="centerX" id="TqC-m4-W3W"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="FqB-zU-tlX" secondAttribute="bottom" constant="20" id="Ucv-md-Nuh"/>
+                            <constraint firstItem="Leo-Mp-hCX" firstAttribute="centerY" secondItem="LWJ-If-JAN" secondAttribute="centerY" id="UeR-7D-S2x"/>
+                            <constraint firstItem="LWJ-If-JAN" firstAttribute="top" secondItem="FqB-zU-tlX" secondAttribute="bottom" id="a6d-QA-Scy"/>
+                            <constraint firstItem="l7U-C3-k1z" firstAttribute="leading" secondItem="FqB-zU-tlX" secondAttribute="trailing" constant="50" id="cXK-uh-ZiC"/>
+                            <constraint firstItem="FqB-zU-tlX" firstAttribute="top" secondItem="ede-YQ-ndl" secondAttribute="bottom" constant="10" id="dhQ-Xb-Vxs"/>
+                            <constraint firstItem="ede-YQ-ndl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="dti-8e-hvS"/>
+                            <constraint firstItem="dGT-uZ-k92" firstAttribute="centerX" secondItem="hsm-5A-dw7" secondAttribute="centerX" id="eCe-DE-yJb"/>
+                            <constraint firstItem="Leo-Mp-hCX" firstAttribute="top" secondItem="l7U-C3-k1z" secondAttribute="bottom" id="fYz-t4-Zbu"/>
+                            <constraint firstItem="ede-YQ-ndl" firstAttribute="top" secondItem="OxG-lQ-8G7" secondAttribute="bottom" constant="10" id="kfN-qC-gLv"/>
+                            <constraint firstItem="l7U-C3-k1z" firstAttribute="centerY" secondItem="FqB-zU-tlX" secondAttribute="centerY" id="oy6-sv-SKz"/>
+                            <constraint firstItem="dGT-uZ-k92" firstAttribute="top" secondItem="hsm-5A-dw7" secondAttribute="bottom" id="q26-gC-Lpf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calendarView" destination="ede-YQ-ndl" id="ETc-AM-c2u"/>
+                        <outlet property="scheduleMonthLabel" destination="M6B-zY-O53" id="CQF-YE-1ga"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89.855072463768124" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chart.bar.xaxis" catalog="system" width="128" height="98"/>
+        <image name="person.crop.circle.badge.moon" catalog="system" width="128" height="113"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
